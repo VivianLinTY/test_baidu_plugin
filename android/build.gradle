@@ -1,0 +1,48 @@
+group 'com.wtfff.test_baidu_plugin'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 19
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    // huawei information
+    signingConfigs {
+        config {
+            keyAlias '请输入自己应用的keyAlias'
+            keyPassword '请输入自己应用的keyPassword'
+            storeFile file('请输入自己应用的签名文件地址')
+            storePassword '请输入自己应用的签名文件密码'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+}

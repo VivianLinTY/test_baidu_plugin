@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        // 华为代理仓库配置
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+
+        // 华为代理依赖
+        classpath 'com.huawei.agconnect:agcp:1.2.1.301'
+    }
+}
+
+allprojects {
+    repositories {
+        // 华为代理仓库配置
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+
+        google()
+        jcenter()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
