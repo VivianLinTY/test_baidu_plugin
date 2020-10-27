@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d76e3daa-40c2-4b61-8c6c-3e6843a3d5c4" name="Default Changelist" comment="" />
+    <list default="true" id="d76e3daa-40c2-4b61-8c6c-3e6843a3d5c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/utils/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/utils/MethodUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/method_utils.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/MyPushMessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/MyPushMessageReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/TestBaiduPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/TestBaiduPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/wtfff/test_baidu_plugin/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/arm64-v8a/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/arm64-v8a/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/armeabi-v7a/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/armeabi-v7a/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/armeabi/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/armeabi/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/mips/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/mips/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/mips64/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/mips64/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/x86/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/x86/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/jniLibs/x86_64/libbdpush_V3_4.so" beforeDir="false" afterPath="$PROJECT_DIR$/android/libs/x86_64/libbdpush_V3_4.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/test_baidu_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test_baidu_plugin.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_baidu_plugin_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_baidu_plugin_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="c5d2236b" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1jH7YJyr7T9VT6R0s8gNJ8CcZ4f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -16,8 +50,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />

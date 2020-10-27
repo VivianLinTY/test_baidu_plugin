@@ -2,14 +2,16 @@ package com.wtfff.test_baidu_plugin;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.baidu.android.pushservice.PushMessageReceiver;
+import com.wtfff.test_baidu_plugin.utils.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+
+import io.flutter.plugin.common.MethodChannel;
 
 /*
  * Push消息处理receiver。请编写您需要的回调函数， 一般来说： onBind是必须的，用来处理startWork返回值；
@@ -34,11 +36,15 @@ import java.util.List;
  */
 
 public class MyPushMessageReceiver extends PushMessageReceiver {
-    /**
-     * TAG to Log
-     */
+
     public static final String TAG = MyPushMessageReceiver.class
             .getSimpleName();
+
+    private static MethodChannel.Result mResultCallback;
+
+    public static void setResultCallback(MethodChannel.Result result) {
+        mResultCallback = result;
+    }
 
     /**
      * 调用PushManager.startWork后，sdk将对push
@@ -63,7 +69,16 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
 
         if (errorCode == 0) {
             // 绑定成功
-            Log.d(TAG, "绑定成功");
+            Log.d(TAG, "bind baidu push success");
+            if (null != mResultCallback) {
+                mResultCallback.success(channelId);
+                mResultCallback = null;
+            }
+        } else {
+            if (null != mResultCallback) {
+                mResultCallback.success(null);
+                mResultCallback = null;
+            }
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
         updateContent(context, responseString);
@@ -79,7 +94,7 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     @Override
     public void onMessage(Context context, String message,
                           String customContentString) {
-        String messageString = "透传消息 onMessage=\"" + message
+        String messageString = "onMessage=\"" + message
                 + "\" customContentString=" + customContentString;
         Log.d(TAG, messageString);
 
@@ -114,7 +129,7 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     public void onNotificationArrived(Context context, String title,
                                       String description, String customContentString) {
 
-        String notifyString = "通知到达 onNotificationArrived  title=\"" + title
+        String notifyString = "onNotificationArrived  title=\"" + title
                 + "\" description=\"" + description + "\" customContent="
                 + customContentString;
         Log.d(TAG, notifyString);
@@ -149,7 +164,7 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     @Override
     public void onNotificationClicked(Context context, String title,
                                       String description, String customContentString) {
-        String notifyString = "通知点击 onNotificationClicked title=\"" + title + "\" description=\""
+        String notifyString = "onNotificationClicked title=\"" + title + "\" description=\""
                 + description + "\" customContent=" + customContentString;
         Log.d(TAG, notifyString);
 
@@ -248,7 +263,7 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
 
         if (errorCode == 0) {
             // 解绑定成功
-            Log.d(TAG, "解绑成功");
+            Log.d(TAG, "Unbind success");
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
         updateContent(context, responseString);
@@ -257,5 +272,4 @@ public class MyPushMessageReceiver extends PushMessageReceiver {
     private void updateContent(Context context, String content) {
         Log.d(TAG, "updateContent content=" + content);
     }
-
 }

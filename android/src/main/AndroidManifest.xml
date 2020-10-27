@@ -235,6 +235,6 @@
         <!-- 在百度开发者中心查询应用的API Key -->
         <meta-data
             android:name="api_key"
-            android:value="dDhpodVsAFTOKA7mEkRGwcaX" />
+            android:value="INSERT YOUR OWN API KEY" />
     </application>
 </manifest>

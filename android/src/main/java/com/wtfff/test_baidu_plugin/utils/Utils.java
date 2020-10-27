@@ -1,4 +1,4 @@
-package com.wtfff.test_baidu_plugin;
+package com.wtfff.test_baidu_plugin.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,16 +9,16 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Utils {
-    public static final String TAG = "PushDemoActivity";
+
+    private static final String TAG = "Utils";
     public static String logStringCache = "";
 
-    // 获取ApiKey
+    //Get api key
     public static String getMetaValue(Context context, String metaKey) {
         Bundle metaData = null;
         String apiKey = null;
@@ -38,6 +38,7 @@ public class Utils {
         } catch (NameNotFoundException e) {
             Log.e(TAG, "error " + e.getMessage());
         }
+        Log.d(TAG, "apiKey: " + apiKey);
         return apiKey;
     }
 
@@ -73,5 +74,4 @@ public class Utils {
         editor.putString("log_text", text);
         editor.commit();
     }
-
 }
